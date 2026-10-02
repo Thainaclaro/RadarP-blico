@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Área principal */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Card de Login */
+
+.login-card {
+    width: 360px;
+    min-height: 500px;
+
+    background-color: #ffffff;
+
+    border-radius: 30px;
+
+    padding: 60px 40px;
+
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.20);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+
+.login-card h1 {
+    color: #FD8639;
+
+    font-size: 32px;
+
+    margin-bottom: 45px;
+}
+
+/* Formulário */
+
+form {
+    width: 100%;
+}
+
+/* Campos */
+
+.campo {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.campo input {
+    width: 100%;
+    height: 48px;
+
+    border: 2px solid #e5e5e5;
+    border-radius: 25px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.campo input:focus {
+    border-color: #FD8639;
+}
+
+/* Botão */
+
+#button-enviar {
+    width: 110px;
+    height: 42px;
+
+    display: block;
+    margin: 25px auto 0;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #FF7F0B;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+ #button-enviar:hover{
+    background-color: #FD8639;
+    transform: scale(1.03);
+}
+
+/* Links */
+
+.links {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 35px;
+}
+
+.links a {
+    color: #FD8639;
+
+    font-size: 13px;
+
+    text-decoration: none;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade */
+
+@media (max-width: 500px) {
+
+    .login-card {
+        width: 85%;
+        min-height: 480px;
+
+        padding: 50px 30px;
+    }
+
+    .login-card h1 {
+        font-size: 28px;
+    }
+}
