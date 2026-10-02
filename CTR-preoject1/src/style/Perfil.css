@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.perfil-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #ffffff;
+}
+
+.perfil-card {
+  width: 360px;
+
+  padding: 30px 25px;
+
+  background-color: #FF7F0B;
+
+  border-radius: 25px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.20);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Ícone */
+
+.perfil-icon {
+  width: 70px;
+  height: 70px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #000000;
+
+  border-radius: 50%;
+
+  font-size: 35px;
+
+  margin-bottom: 10px;
+}
+
+/* Título */
+
+.perfil-card h1 {
+  color: #ffffff;
+
+  font-size: 28px;
+
+  margin-bottom: 25px;
+}
+
+/* Informações */
+
+.perfil-info {
+  width: 100%;
+}
+
+.campo-perfil {
+  width: 100%;
+
+  margin-bottom: 12px;
+}
+
+.campo-perfil span {
+  display: block;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  margin-left: 10px;
+
+  margin-bottom: 4px;
+}
+
+.campo-perfil p {
+  width: 100%;
+
+  min-height: 38px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 15px;
+
+  background-color: #ffffff;
+
+  border-radius: 20px;
+
+  color: #555555;
+
+  font-size: 13px;
+}
+
+/* Botão */
+
+.editar-btn {
+  width: 130px;
+  height: 40px;
+
+  margin-top: 15px;
+
+  border: none;
+
+  border-radius: 20px;
+
+  background-color: #ffffff;
+
+  color: #FF7F0B;
+
+  font-weight: bold;
+
+  cursor: pointer;
+}
+
+.editar-btn:hover {
+  background-color: #f2f2f2;
+}
+
+/* Voltar */
+
+.voltar {
+  margin-top: 18px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}

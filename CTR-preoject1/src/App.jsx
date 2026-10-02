@@ -1,12 +1,16 @@
-import { useState } from 'react'
+import { BrowserRouter,Route, Routes } from 'react-router-dom'
 import { Login } from './components/Login'
+import Cadastro from './components/cadastro'
 
 
 function App() {
   return (
-    <>
-     <Login />
-    </>
+     <BrowserRouter>
+     <Routes>
+        <Route path='/' element ={<Login />} />
+        <Route path='/Cadastro' element={<Cadastro/>}/>
+     </Routes> 
+     </BrowserRouter>
   )
 }
 
