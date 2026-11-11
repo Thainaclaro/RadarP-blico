@@ -1,6 +1,6 @@
 <?php
 
-$host = 'localhost';
+$host = '127.0.0.1';
 $dbname = 'radar_publico';
 $username = 'root';
 $password = '';
@@ -17,5 +17,7 @@ try {
     );
 } catch (PDOException $e) {
     http_response_code(500);
-    die('Erro ao conectar ao banco de dados.');
+    die(json_encode([
+        'erro' => 'Erro ao conectar ao banco de dados.'
+    ]));
 }

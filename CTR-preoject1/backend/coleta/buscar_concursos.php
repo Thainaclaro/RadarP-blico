@@ -17,7 +17,7 @@ $urlBase = "https://www.in.gov.br/consulta/-/buscar/dou";
 
 $resultados = [];
 
-foreach ($palavrasChave as $indice => $palavra) {
+foreach (array_slice($palavrasChave, 0, 1) as $indice => $palavra) {
 
     $paginaAtual = 1;
 
@@ -66,13 +66,13 @@ foreach ($palavrasChave as $indice => $palavra) {
             break;
         }
 
-        // Salva a primeira página do primeiro termo
-        if ($indice === 0 && $pagina === 1) {
-            file_put_contents(
-                __DIR__ . "/resposta_dou.html",
-                $resposta
-            );
-        }
+       // Salva cada página do primeiro termo
+if ($indice === 0) {
+    file_put_contents(
+        __DIR__ . "/resposta_dou_pagina" . $pagina . ".html",
+        $resposta
+    );
+}
 
         $padrao = '/<script id="_br_com_seatecnologia_in_buscadou_BuscaDouPortlet_params" type="application\/json">\s*(.*?)\s*<\/script>/s';
 

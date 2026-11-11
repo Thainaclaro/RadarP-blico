@@ -1,0 +1,273 @@
+
+* {
+  box-sizing: border-box;
+}
+
+.concursos-container {
+  display: flex;
+  min-height: 100vh;
+  background: #f4f5f7;
+  font-family: Arial, sans-serif;
+  color: #292929;
+}
+
+/* MENU LATERAL */
+
+.concursos-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #ffffff;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e8e8e8;
+}
+
+.concursos-logo {
+  margin-bottom: 55px;
+}
+
+.concursos-logo h2 {
+  font-size: 21px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.concursos-logo h2 span {
+  color: #e87832;
+}
+
+.concursos-logo small {
+  display: block;
+  margin-top: 7px;
+  color: #888;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.concursos-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.concursos-sidebar nav button,
+.concursos-sair {
+  border: none;
+  background: transparent;
+  padding: 13px;
+  text-align: left;
+  font-size: 14px;
+  color: #666;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.concursos-sidebar nav button:hover,
+.concursos-sidebar nav button.selecionado {
+  background: #fff0e6;
+  color: #d96825;
+  font-weight: bold;
+}
+
+.concursos-sair {
+  margin-top: auto;
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+.concursos-main {
+  flex: 1;
+  padding: 40px;
+  min-width: 0;
+}
+
+.concursos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 35px;
+}
+
+.concursos-header span {
+  color: #e87832;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.concursos-header h1 {
+  font-size: 30px;
+  margin: 9px 0;
+}
+
+.concursos-header p {
+  color: #777;
+  font-size: 14px;
+}
+
+.concursos-header button {
+  background: #292929;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PESQUISA */
+
+.concursos-pesquisa,
+.concursos-filtros,
+.concursos-resultados {
+  background: white;
+  padding: 25px;
+  border-radius: 9px;
+  margin-bottom: 22px;
+  border: 1px solid #ededed;
+}
+
+.concursos-pesquisa label,
+.concursos-filtros label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.concursos-pesquisa input,
+.concursos-filtros select {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  font-size: 13px;
+  background: white;
+}
+
+.concursos-pesquisa input:focus,
+.concursos-filtros select:focus {
+  border-color: #e87832;
+}
+
+/* FILTROS */
+
+.concursos-filtros {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* RESULTADOS */
+
+.resultados-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.resultados-titulo h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.resultados-titulo span {
+  font-size: 12px;
+  color: #777;
+}
+
+.concursos-vazio {
+  text-align: center;
+  padding: 55px 15px;
+  border: 1px dashed #ddd;
+  border-radius: 7px;
+}
+
+.concursos-vazio h3 {
+  font-size: 17px;
+}
+
+.concursos-vazio p {
+  color: #888;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.lista-concursos {
+  display: grid;
+  gap: 15px;
+}
+
+.concurso-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+.concurso-card h3 {
+  margin-top: 0;
+}
+
+.concurso-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+  .concursos-sidebar {
+    width: 200px;
+  }
+
+  .concursos-main {
+    padding: 25px;
+  }
+
+  .concursos-filtros {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .concursos-container {
+    flex-direction: column;
+  }
+
+  .concursos-sidebar {
+    width: 100%;
+    min-height: auto;
+    padding: 20px;
+  }
+
+  .concursos-logo {
+    margin-bottom: 20px;
+  }
+
+  .concursos-sidebar nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .concursos-sair {
+    margin-top: 15px;
+  }
+
+  .concursos-main {
+    padding: 20px 15px;
+  }
+
+  .concursos-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .concursos-header h1 {
+    font-size: 25px;
+  }
+}
